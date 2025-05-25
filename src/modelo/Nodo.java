@@ -5,20 +5,20 @@ import interfaces.IPersona;
 
 public class Nodo implements INodo {
 	// guardará las personas y tendrá la referencia al nodo de la derecha e izquierda! Comparamos con DNI el mayor y menor!
-	private IPersona persona; // persona del tipo IPersona
-	private INodo derecha;
-	private INodo izquierda;
+	private IPersona persona; 
+	private INodo derecha; // referencia al nodo mayor 
+	private INodo izquierda; // referencia al nodo menor 
 	
-	public Nodo(IPersona p) {
+	public Nodo(IPersona persona) {
 		super();
-		this.persona = p;
+		this.persona = persona; // se le asigna la persona que se pasa por parámetro
 		this.derecha = null; // nada mas crear el nodo, queremos que derecha e izquierda sean null porque no sabemos todavía
-		// a que nodos va a apuntar
+		// a que nodos va a apuntar dicho nodo creado
 		this.izquierda = null;
 	}
 	
-	
 	// getters and setters -->
+
 	public IPersona getPersona() {
 		return persona;
 	}
@@ -43,7 +43,9 @@ public class Nodo implements INodo {
 		this.izquierda = izquierda;
 	}
 	
-	// toString no usamos en los árboles, creamos nosotros nuestro propios métodos!! Es por eso que no necesitamos toString de los nodos!
+	
+	// no usamos el toString de los nodos ya que para imprimir cada nodo dentro del árbol usamos 3 métodos que acceden a cada dato de cada nodo.
+
 	
 	
 

@@ -1,9 +1,11 @@
 package modelo;
 
-public class Persona {
+import interfaces.IPersona;
+
+public class Persona implements IPersona {
 	// defino atributos de la clase persona
 	private String Nombre;
-	private int DNI;
+	private int DNI; // atributo por el cual se ordenará el arbol!!
 	
 	// constructor de la persona
 	public Persona(String nombre, int dNI) {
