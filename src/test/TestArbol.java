@@ -32,8 +32,8 @@ public class TestArbol {
 			new Persona("Mateo", 66778899)
 		};
 
-        IArbol arbolPorNombre = new Arbol();
-        IArbol arbolPorDNI = new Arbol();
+        IArbol<IPersona> arbolPorNombre = new Arbol<>();
+        IArbol<IPersona> arbolPorDNI = new Arbol<>();
 
 		for (IPersona per : personas) {
 			arbolPorNombre.insertar(per, criterioPorNombre);

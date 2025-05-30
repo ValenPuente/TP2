@@ -4,19 +4,20 @@ import interfaces.IPersona;
 
 public class Persona implements IPersona {
 	// defino atributos de la clase persona
-	private String Nombre;
-	private int DNI; // atributo por el cual se ordenará el arbol!!
+	private final String nombre;
+	private final int dni; // atributo por el cual se ordenará el arbol!!
 	
 	// constructor de la persona
-	public Persona(String nombre, int dNI) {
+	public Persona(String nombre, int dni) {
 		super();
-		Nombre = nombre;
-		DNI = dNI;
+		this.nombre = nombre;
+		this.dni = dni;
 	}
 	
 	// getters y setters
+	@Override
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
 
 	// no tiene sentido que alguien de fuera cambie el nombre de mi persona, por eso lo sacamos!!
@@ -26,8 +27,9 @@ public class Persona implements IPersona {
 	}*/
 
 	// getter para obtener DNI
+	@Override
 	public int getDNI() {
-		return DNI;
+		return dni;
 	}
 
 	// lo mismo para DNI, no tiene sentido que alguien de fuera lo cambie!
@@ -40,7 +42,7 @@ public class Persona implements IPersona {
 	// toString() -->
 	@Override
 	public String toString() {
-		return "Persona [Nombre=" + Nombre + ", DNI=" + DNI + "]";
+		return "Persona [Nombre=" + nombre + ", DNI=" + dni + "]";
 	}
 	
 	

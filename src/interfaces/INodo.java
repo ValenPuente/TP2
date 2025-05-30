@@ -1,21 +1,21 @@
 package interfaces;
 
-public interface INodo {
+public interface INodo<T> {
 	
-	public IPersona getPersona();
+	public T getDato();
 	
-	public void setPersona(IPersona persona);
+	public void setDato(T dato);
 		
 
-	public INodo getDerecha();
+	public INodo<T> getDerecha();
 	
-	public void setDerecha(INodo derecha);
+	public void setDerecha(INodo<T> derecha);
 		
 
-	public INodo getIzquierda();
+	public INodo<T> getIzquierda();
 		
 
-	public void setIzquierda(INodo izquierda);
+	public void setIzquierda(INodo<T> izquierda);
 		
 
 	}

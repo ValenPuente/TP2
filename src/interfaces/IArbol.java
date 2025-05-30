@@ -1,29 +1,23 @@
 package interfaces;
 import java.util.Comparator;
 
-public interface IArbol {
-	
-	public void insertar(IPersona persona, Comparator<IPersona> Criterio);
+public interface IArbol<T> {
+	public void insertar(T elemento, Comparator<T> comparador);
 
-	public INodo insertarRec(INodo nodo, IPersona persona, Comparator<IPersona> Criterio);
-	
-	public void preOrder(INodo nodo);
-	
-	public void inOrder(INodo nodo);
-	
-	public void postOrder(INodo nodo);
+	public INodo<T> insertarRec(INodo<T> nodo, T elemento, Comparator<T> comparador);
 
-	public INodo getRaiz();
+	public void preOrder(INodo<T> nodo);
+	public void inOrder(INodo<T> nodo);
+	public void postOrder(INodo<T> nodo);
 
-	public void setRaiz(INodo raiz);
+	public INodo<T> getRaiz();
+	public void setRaiz(INodo<T> raiz);
 
-	public void eliminar(IPersona persona, Comparator<IPersona> Criterio);
+	public void eliminar(T elemento, Comparator<T> comparador);
+	public INodo<T> eliminarRec(INodo<T> nodo, T elemento, Comparator<T> comparador);
 
-	public INodo eliminarRec(INodo nodo, IPersona persona, Comparator<IPersona> Criterio);
+	public INodo<T> encontrarMinimo(INodo<T> nodo);
 
-	public INodo encontrarMinimo(INodo nodo);
-
-	public boolean buscar(IPersona persona, Comparator<IPersona> Criterio, Comparator<IPersona> Criterio2);
-
-	public INodo buscarRec(INodo nodo, IPersona persona, Comparator<IPersona> Criterio);
+	public boolean buscar(T elemento, Comparator<T> comparador, Comparator<T> comparador2);
+	public INodo<T> buscarRec(INodo<T> nodo, T elemento, Comparator<T> comparador);
 }
